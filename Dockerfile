@@ -53,11 +53,11 @@ RUN apk add --no-cache libstdc++ \
    echo '  "UpdatePrerelease": false' >> /tmp/ServerConfig.json && \
    echo "}" >> /tmp/ServerConfig.json && \
    
-   export APIKEY=${APIKEY-$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)} && \
-   export INSTANCEID=${INSTANCEID-$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 100 | head -n 1)} &&\
-   sed 's/<apikey>/'${APIKEY}'/;s/<instanceid>/'${INSTANCEID}'/' /tmp/ServerConfig.json > /config/ServerConfig.json && \
+#   export APIKEY=${APIKEY-$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)} && \
+#   export INSTANCEID=${INSTANCEID-$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 100 | head -n 1)} &&\
+#   sed 's/<apikey>/'${APIKEY}'/;s/<instanceid>/'${INSTANCEID}'/' /tmp/ServerConfig.json > /config/ServerConfig.json && \
    chmod -R u=rwX,go=rwX /config && \
-   rm -rf /tmp/* 
+#   rm -rf /tmp/* 
 
 VOLUME ["/config"]
 
