@@ -9,19 +9,19 @@ Link on github: <a href="https://www.github.com/niiv0832/jackett_Dockerfile">nii
 ## Usage
 
 ```shell
-docker run -d --name=jackett --restart always --hostname=jackett -p 9117:9117 -v $YOUR_PATH_TO_JSON_CONFIG_DIR$:/config -t niiv0832/jackett
+docker run -d --name=jackett --restart=always --hostname=jackett -p 9117:9117 -v $YOUR_PATH_TO_JSON_CONFIG_DIR$:/config -t niiv0832/jackett
 ```
 
-## Environment
+### Environment
 
 - `$SUID`         - User ID to run as. _default: `921`_
 - `$SGID`         - Group ID to run as. _default: `921`_
 - `$TZ`           - Timezone. _optional_
 
-## Volume
+### Volume
 
 - `/config`       - Server configuration file location.
 
-## Network
+### Network
 
 - `9117/tcp`      - WebUI.
