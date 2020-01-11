@@ -2,6 +2,8 @@
 
 Fork of <a href="https://github.com/triptixx/jackett">triptixx/jackett</a> docker image for the torznab proxy Jackett. Just have added auto generating sonfig file.
 
+## Links:
+
 Link on docker hub: <a href="https://hub.docker.com/r/niiv0832/sslibev_serv">niiv0832/jackett</a>
 
 Link on github: <a href="https://www.github.com/niiv0832/jackett_Dockerfile">niiv0832/jackett_Dockerfile</a>
@@ -9,7 +11,7 @@ Link on github: <a href="https://www.github.com/niiv0832/jackett_Dockerfile">nii
 ## Usage
 
 ```shell
-docker run -d --name=jackett --restart=always --hostname=jackett -p 9117:9117 -v $YOUR_PATH_TO_JSON_CONFIG_DIR$:/config -t niiv0832/jackett
+docker run -d --name=jackett --restart=always -p 9117:9117 -v $YOUR_PATH_TO_JSON_CONFIG_DIR$:/config -t niiv0832/jackett
 ```
 
 ### Environment
