@@ -4,7 +4,7 @@ Fork of <a href="https://github.com/triptixx/jackett">triptixx/jackett</a> docke
 
 ## Links:
 
-Link on docker hub: <a href="https://hub.docker.com/r/niiv0832/sslibev_serv">niiv0832/jackett</a>
+Link on docker hub: <a href="https://hub.docker.com/r/niiv0832/jackett">niiv0832/jackett</a>
 
 Link on github: <a href="https://www.github.com/niiv0832/jackett_Dockerfile">niiv0832/jackett_Dockerfile</a>
 
