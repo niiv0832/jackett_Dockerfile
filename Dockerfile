@@ -59,7 +59,7 @@ RUN apk add --no-cache libstdc++ \
    chmod -R u=rwX,go=rwX /config && \
 #   rm -rf /tmp/* 
 
-VOLUME ["/config"]
+VOLUME /config
 
 EXPOSE 9117/TCP
 
