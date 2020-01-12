@@ -55,7 +55,7 @@ RUN apk add --no-cache libstdc++ \
    mkdir -p /usr/local/bin/ && \
    touch /usr/local/bin/entrypoint.sh && \
    echo '#!/bin/sh' > /usr/local/bin/entrypoint.sh && \
-   echo 'APIKEY=${APIKEY-$(cat /dev/urandom | tr -dc "a-zA-Z0-9" | fold -w 32 | head -n 1)}" >> /usr/local/bin/entrypoint.sh && \
+   echo 'APIKEY=${APIKEY-$(cat /dev/urandom | tr -dc "a-zA-Z0-9" | fold -w 32 | head -n 1)}' >> /usr/local/bin/entrypoint.sh && \
    echo 'INSTANCEID=${INSTANCEID-$(cat /dev/urandom | tr -dc "a-zA-Z0-9" | fold -w 100 | head -n 1)}' >> /usr/local/bin/entrypoint.sh && \
    echo 'if [ ! -e /config/ServerConfig.json ]; then' >> /usr/local/bin/entrypoint.sh && \
    echo '	sed "s/<apikey>/"${APIKEY}"/;s/<instanceid>/"${INSTANCEID}"/" /tmp/ServerConfig.json > /config/ServerConfig.json' >> /usr/local/bin/entrypoint.sh && \
