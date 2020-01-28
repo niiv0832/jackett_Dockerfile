@@ -35,10 +35,12 @@ LABEL org.label-schema.name="jackett" \
 
 COPY --from=builder /output/ /
 
-RUN apk add --no-cache libstdc++ \
-                       libgcc \
-                       libintl \ 
-                       icu-libs && \
+RUN apk add --no-cache --update \
+                                libstdc++ \
+                                libgcc \
+                                libintl \ 
+                                icu-libs && \
+   rm -rf /var/cache/apk/* && \
 ### create ServerConfig.json template
    touch /tmp/ServerConfig.json && \
    echo '{' > /tmp/ServerConfig.json && \
